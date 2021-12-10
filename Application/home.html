@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Home Feed</title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  
+  <body>
+
+    <div  class="container">
+
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: center; margin-top: 30px; margin-bottom: 30px; border-bottom:1px solid #222222;">
+              <h3>Home Feed</h3>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!-- view Image Area-->
+        <div class="row align-items-start">
+          <div class="col-2"  ></div>
+
+          <div class="col-8" style="text-align: center;" >
+            <div style="padding:5px;">
+              <!-- <button  id = "retrieveImages" type="button" class="btn btn-primary">View Images</button> -->
+            </div>
+            <div id="ImageList">
+            </div>
+          </div>
+
+          <div class="col-2"  ></div>
+        </div>
+
+
+        <!--New Image Box-->
+
+        <button type="button" id="formButton" class="col-12 btn btn-primary"
+                style="margin-bottom: 15px;">Add New Post</button>
+
+          <div id="newImagePost" class="row align-items-start" style="display: None;">
+
+            <div class="col-2" ></div>
+
+            <div class="col-8" style="text-align: left; border-bottom:1px solid #222222;">
+              <form style="font-size: 10pt;" id="newImageForm">
+
+                <div class="mb-3">
+                  <label for="userID" class="form-label">User ID</label>
+                  <input type="string" class="form-control" id="userID">
+                </div>
+
+                <div class="mb-3">
+                  <label for="userName" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="userName">
+                </div>
+
+                <div class="mb-3">
+                  <label for="caption" class="form-label">Caption</label>
+                  <input type="text" class="form-control" id="caption">
+                </div>
+
+                <div class="mb-3">
+                  <label for="mediaType" class="form-label">Select Media Type:</label>
+                  <select class="form-label" id="mediaType" name="mediaType" size="3" multiple>
+                    <option value="imageFile">Image</option>
+                    <option value="videoFile">Video</option>
+                    <option value="audioFile">Audio</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="UpFile" class="form-label">File to Upload</label>
+                  <input type="file" class="form-control" id="UpFile">
+                </div>
+            
+                <button type="button" id="submitNewForm" class="btn btn-primary">Submit</button> <br/><br/>
+              </form>
+            </div>
+
+            <div class="col-2"></div>
+
+          </div>
+        
+    </div>
+  
+  </body>
+</html>

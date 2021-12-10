@@ -3,98 +3,94 @@
   <head>
     <meta charset="UTF-8">
 
-    <title>Home Feed</title>
-
       <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
       <script type="text/javascript" src="JS/bootstrap.js"></script>
       <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
       <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
 
-      <script type="text/javascript" src="JS/app.js"></script>
+      <script type="text/javascript" src="JS/login.js"></script>
 
   </head>
-  
-  <body>
+ 
+<body> 
 
     <div  class="container">
 
-        <!--Header-->
         <div class="row align-items-start">
             <div class="col-2"  ></div>
 
-            <div class="col-8" style="text-align: center; margin-top: 30px; margin-bottom: 30px; border-bottom:1px solid #222222;">
-              <h3>Home Feed</h3>
+            <div class="col-8" style="text-align: center; margin-top: 30px;">
+              <h3>Login or Create an Account</h3>
             </div>
 
             <div class="col-2"  ></div>
         </div>
 
-        <!-- view Image Area-->
+        <!--Login Form-->
         <div class="row align-items-start">
-          <div class="col-2"  ></div>
+            <div class="col-2" ></div>
+            <div class="col-8" style="text-align: left; margin-top: 15px;">        
+                <form style="align-items: center; font-size: 10pt;" id="loginForm">
+                    <div class="mb-3">
+                    <label for="loginUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="loginUsername">
+                    </div>
 
-          <div class="col-8" style="text-align: center;" >
-            <div style="padding:5px;">
-              <!-- <button  id = "retrieveImages" type="button" class="btn btn-primary">View Images</button> -->
+                    <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="loginPassword">
+                    </div>
+                    <button type="button" id="submitLoginForm" class="btn btn-primary">Login</button> <br/><br/>
+                </form>
             </div>
-            <div id="ImageList">
-            </div>
-          </div>
-
-          <div class="col-2"  ></div>
         </div>
 
 
-        <!--New Image Box-->
+        <!--Signup Form-->
+        <div style="text-align: center;">
+          <button type="button" id="signupButton" class="col-8 btn btn-primary"
+          style="margin-top: 15px; margin-bottom: 30px;">Create an Account</button>
+        </div>
 
-        <button type="button" id="formButton" class="col-12 btn btn-primary"
-                style="margin-bottom: 15px;">Add New Post</button>
-
-          <div id="newImagePost" class="row align-items-start" style="display: None;">
+          <div id="signupForm" class="row align-items-start" style="display: None;">
 
             <div class="col-2" ></div>
 
             <div class="col-8" style="text-align: left; border-bottom:1px solid #222222;">
-              <form style="font-size: 10pt;" id="newImageForm">
-
+              <form style="font-size: 10pt;" id="newSignupForm">
                 <div class="mb-3">
-                  <label for="userID" class="form-label">User ID</label>
-                  <input type="string" class="form-control" id="userID">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName">
                 </div>
 
                 <div class="mb-3">
-                  <label for="userName" class="form-label">Username</label>
-                  <input type="text" class="form-control" id="userName">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                  </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="text" class="form-control" id="email">
                 </div>
 
                 <div class="mb-3">
-                  <label for="caption" class="form-label">Caption</label>
-                  <input type="text" class="form-control" id="caption">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username">
                 </div>
 
                 <div class="mb-3">
-                  <label for="mediaType" class="form-label">Select Media Type:</label>
-                  <select class="form-label" id="mediaType" name="mediaType" size="3" multiple>
-                    <option value="imageFile">Image</option>
-                    <option value="videoFile">Video</option>
-                    <option value="audioFile">Audio</option>
-                  </select>
-                </div>
-
-                <div class="mb-3">
-                  <label for="UpFile" class="form-label">File to Upload</label>
-                  <input type="file" class="form-control" id="UpFile">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
                 </div>
             
-                <button type="button" id="submitNewForm" class="btn btn-primary">Submit</button> <br/><br/>
+                <button type="button" id="submitNewUser" onclick="routeLogin()" class="btn btn-primary">Submit</button> <br/><br/>
               </form>
             </div>
 
             <div class="col-2"></div>
 
           </div>
-        
+
     </div>
-  
-  </body>
-</html>
+
+</body>
