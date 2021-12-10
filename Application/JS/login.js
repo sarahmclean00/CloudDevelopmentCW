@@ -45,3 +45,7 @@ $(document).ready(function() {
         $("#signupForm").toggle();
     });
 });
+
+function routeLogin(){
+    window.location.href = './feed.html';
+}
